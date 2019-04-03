@@ -24,5 +24,5 @@ where mu is dampening coefficient
 
 ![Phase Portrait](/phase-portrait.png)
 
-from figure we can see that for starting points near origin and small velocites the pendulum
+From figure we can see that for starting points near origin and small velocites the pendulum
 goes into a spiral straightaway, for others it keeps going right until also going into a spiral.
