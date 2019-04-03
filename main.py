@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
 """
-damped pendulum visualization in python
+damped pendulum visualization with phase plot in python
 -------------------
 undamped pendulum with no driving force:
 y'' + sin(y) = 0
