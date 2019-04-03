@@ -1,5 +1,5 @@
 # SingleDampenedPendulumVisualization
-Single dampened pendulum plot visualization in python
+Single dampened pendulum visualization with phase plot in python
 
 Undamped pendulum with no driving force is defined as:
 
