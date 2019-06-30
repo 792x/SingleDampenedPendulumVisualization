@@ -22,7 +22,7 @@ ylimit = 5
 mu = 0.1
 
 def f(Y, t):
-    y1, y2 = 
+    y1, y2 = Y
     return [y2, -(g/L)*np.sin(y1) - mu * y2] #for without driving force use -np.sin(y1) - mu * y2
 
 y1 = np.linspace(-3.0, xlimit, 20)
