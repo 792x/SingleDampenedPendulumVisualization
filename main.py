@@ -16,17 +16,23 @@ to make it damped we modify with
 - mu * y2
 where mu is dampening coefficient
 """
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
 
-xlimit = 10
-ylimit = 5
+xUpperLimit = 25
+xLowerLimit = -3.0
+yUpperLimit = 5
+yLowerLimit = -3.0
 mu = 0.1
 
 def f(Y, t):
     y1, y2 = Y
-    return [y2, -np.sin(y1) - mu * y2] #for without driving force use -np.sin(y1) - mu * y2
+    return [y2, -np.sin(y1)] #for without dampening use [y2, -np.sin(y1)]
 
-y1 = np.linspace(-3.0, xlimit, 20)
-y2 = np.linspace(-3.0, ylimit, 20)
+y1 = np.linspace(xLowerLimit, xUpperLimit, 20) #our x axis
+y2 = np.linspace(yLowerLimit, yUpperLimit, 20) #our y axis
+
 
 Y1, Y2 = np.meshgrid(y1, y2)
 
@@ -60,8 +66,8 @@ for y20 in [0, 0.5, 1, 1.5, 2, 2.5, 3.0]:
     
 plt.xlabel('$y_1 (angle)$')
 plt.ylabel('$y_2 (velocity)$')
-plt.xlim([-3.0, xlimit])
-plt.ylim([-3.0, ylimit])
+plt.xlim([xLowerLimit, xUpperLimit])
+plt.ylim([yLowerLimit, yUpperLimit])
 plt.savefig('phase-portrait.png')
 plt.show()
 
